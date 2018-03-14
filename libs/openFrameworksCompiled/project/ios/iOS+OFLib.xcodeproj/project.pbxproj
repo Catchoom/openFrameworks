@@ -1180,6 +1180,7 @@
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../../lib/ios/";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1193,6 +1194,10 @@
 					"\"$(SRCROOT)/kiss/lib/linux64\"",
 					"\"$(SRCROOT)/../../../tess2/lib/ios\"",
 					"\"$(SRCROOT)/../../../poco/lib/ios\"",
+				);
+				OTHER_CFLAGS = (
+					"$(OF_CORE_CFLAGS)",
+					"-fembed-bitcode",
 				);
 				PRODUCT_NAME = "ofxiOS_${PLATFORM_NAME}_Debug";
 				SDKROOT = iphoneos;
@@ -1208,6 +1213,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
@@ -1219,6 +1225,10 @@
 					"\"$(SRCROOT)/kiss/lib/linux64\"",
 					"\"$(SRCROOT)/../../../tess2/lib/ios\"",
 					"\"$(SRCROOT)/../../../poco/lib/ios\"",
+				);
+				OTHER_CFLAGS = (
+					"$(OF_CORE_CFLAGS)",
+					"-fembed-bitcode",
 				);
 				PRODUCT_NAME = "ofxiOS_${PLATFORM_NAME}_Release";
 				SDKROOT = iphoneos;
